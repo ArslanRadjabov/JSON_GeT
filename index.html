@@ -13,38 +13,63 @@
 
 <body>
 
-    <button onclick="loadHTTP()" id="btn">click me</button>
+    <section class="demo">
+        <div>
+            <ul class="demo__list">
 
-    <div id="demo"></div>
-
-
+            </ul>
+        </div>
+    </section>
 
     <script>
-        let btn = document.getElementById('btn');
-
-        function loadHTTP() {
-            let outRequest = new XMLHttpRequest();
-            outRequest.open(
-                "GET",
-                "https://learnwebcode.github.io/json-example/animals-1.json"
-            );
-            outRequest.onload = function() {
-                let outData = JSON.parse(outRequest.responseText);
-                renderHTML(outData);
-            };
-            outRequest.send();
-        }
-
-        function renderHTML(outData) {
-            let htmlString = "";
-            outData.forEach((element) => {
-                htmlString +=
-                    "<p>" + element.name + "is a" + element.species + "</p>";
-            });
-            document.querySelector("#demo").innerHTML = htmlString;
-        }
     </script>
     <script src="js/main.js"></script>
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<button onclick="loadHTTP()" id="btn">click me</button>
+
+<div id="demo"></div>
+ -->
+
+
+<!-- let btn = document.getElementById('btn');
+
+function loadHTTP() {
+    let outRequest = new XMLHttpRequest();
+    outRequest.open(
+        "GET",
+        "https://learnwebcode.github.io/json-example/animals-1.json"
+    );
+    outRequest.onload = function() {
+        let outData = JSON.parse(outRequest.responseText);
+        renderHTML(outData);
+    };
+    outRequest.send();
+}
+
+function renderHTML(outData) {
+    let htmlString = "";
+    outData.forEach((element) => {
+        htmlString +=
+            "<p>" + element.name + "is a" + element.species + "</p>";
+    });
+    document.querySelector("#demo").innerHTML = htmlString; -->
+}
